@@ -3,12 +3,15 @@
   <head>
     <title>Alien Tiles</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
     <div>
       <h1>Alien Tiles</h1>
-      <input type="number" id="dimension" autofocus value="7" min="1" max="20" placeholder="Table dimension">
-      <button id="button1" onclick="createTable()">Set</button>
+      <input type="number" id="dimension" autofocus value="7" min="2" max="20" placeholder="Dimension">
+      <button id="submit" onclick="createTable()">
+        SUBMIT
+      </button>
     </div>
     <div><div id="table" class="grid-container"></div></div>
     <script src="alientiles.js"></script>
