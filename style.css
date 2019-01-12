@@ -37,11 +37,6 @@ h1 {
   transition-delay: 0s;
 }
 
-.grid-item:hover {opacity: 0.7;}
-.grid-item:focus {
-    outline:0;
-}
-
 
 #submit {
   font-family: 'Open Sans', sans-serif;
@@ -53,10 +48,10 @@ h1 {
   border-radius: 5px;
 }
 
-#submit:hover {
+button:hover, button:active {
   opacity: 0.7;
 }
 
-#submit:focus {
+button:focus {
   outline:0;
 }
