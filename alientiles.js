@@ -32,3 +32,16 @@ function createTable() {
       }
     }
   }
+
+  window.onload = function(){
+    var id = document.getElementById("dimension");
+    id.addEventListener("keyup", function(event) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Trigger the button element with a click
+        document.getElementById("button1").click();
+      }
+      });
+    };
