@@ -1,3 +1,8 @@
 # alientiles
-This is a Javascript implementation of the original Java applet.
-My fork of this code adds some of the original instructional content of alientiles.com and implements standard colors with a starting selection and ability to randomize.
+This is a Javascript implementation of the original Java applet forked from https://github.com/francescocorda (Frances Cocorda)
+Fork includes:
+* CSS adjustments
+* Color standardization
+* Randomization of tile colors
+* Selection of start color
+* Adapting some of the original instructional content from alientiles.com
