@@ -1,5 +1,5 @@
 # alientiles
-This is a Javascript implementation of the original Java applet forked from https://github.com/francescocorda (Frances Cocorda)
+This is a Javascript implementation of the original Java applet forked from https://github.com/francescocorda (Francesco Corda)
 Fork includes:
 * CSS adjustments
 * Color standardization
