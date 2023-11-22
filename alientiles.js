@@ -1,19 +1,30 @@
 var tiles;
 var dimension;
 const COLORS = 4;
-const START_COLOR = 0;
+//const START_COLOR = 0;
 
 var tile_color = {
-    '0': '#f44336',
-    '1': '#4caf50',
-    '2': '#2196f3',
-    '3': '#9c27b0'
+    '0': 'red',
+    '1': 'green',
+    '2': 'blue',
+    '3': 'purple'
     }
 
 function createTable() {
   document.getElementById("table").innerHTML = "";
   dimension = document.getElementById("dimension").value;
-  tiles = new Array(dimension*dimension).fill(START_COLOR);
+  if (document.getElementById("colorComboBox").selectedIndex != 1) 
+  {
+	  tiles = new Array(dimension*dimension).fill(document.getElementById("colorComboBox").value);
+  }
+  else
+  {
+	  tiles = new Array(dimension*dimension);
+	  for (var t = 0; t < tiles.length; t++)
+	  {
+		  tiles[t] = Math.floor(Math.random() * 4);
+	  }
+  }
   document.documentElement.style.setProperty("--dimension", dimension);
   document.getElementById("table").style["grid-template-columns"] =  'repeat(var(--dimension), auto)';
   for (var i = 0; i < dimension*dimension; i++) {

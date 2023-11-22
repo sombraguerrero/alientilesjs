@@ -3,18 +3,35 @@
   <head>
     <title>Alien Tiles</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <h1>Alien Tiles 👽</h1>
-    <div id="form">
-      <input type="number" id="dimension" autofocus value="7" min="2" max="14" placeholder="Dimension">
-      <button id="submit" onclick="createTable()">
-        SUBMIT
-      </button>
+    <h1>Alien Tiles &#x1f47d;</h1>
+    <h2>How the Puzzle Works</h2> Click on any tile in the array, and then all tiles in the same row and column advance by one color in a cycle from <font color="red">red</font> to <font color="green">green</font> to <font color="blue">blue</font> to <font color="purple">purple</font> and finally back to red. (In other words, the puzzle is to find a sequence of clicks that transforms a starting state of all red squares to a goal state.) <h2>Goals</h2>
+    <ol>
+      <li>Starting from all red, your goal is to make every cell in the puzzle turn all green, blue, or purple in as few moves as possible. Are you certain your solution requires the least number of moves? </li>
+      <li>Starting from all red, create a board that is all purple except for a single, central red tile. </li>
+      <li>Inside the 7x7 array, create a Xenoplastic Diamond -- a rotated 4x4 square of one color inlaid within tiles all of another color. Click <a href="assets/xenop1.jpg">here</a> for an example. If you can ever create this magnificent specimen, you will have a long life filled with joy. </li>
+      <li>To achieve ultimate peace and transcendence, create the following Alien Tile "Sivaraman" patterns: <a href="assets/siva1.jpg">Bazuluk</a>, <a href="assets/siva2.jpg">Shenkursk</a>, <a href="assets/siva3.jpg">Vologda</a>, <a href="assets/siva4.jpg">Novomoskovsk</a>, <a href="assets/siva5.jpg">Orel</a>, <a href="assets/siva6.jpg">Shar'ya</a>, <a href="assets/siva7.jpg">Vyshniy</a>, <a href="assets/siva8.jpg">Charon</a>
+      </li>
+    </ol>
+    <div id="form"> Number of Tiles: <input type="number" id="dimension" autofocus value="7" min="2" max="14" placeholder="Dimension">
+      <select name="colorSel" id="colorComboBox">
+        <option name="placeholder" value="">Select a starting color!</option>
+        <option name="random" value="Randomize">Randomize all tile colors!</option>
+        <option name="red" value=0>Red</option>
+        <option name="green" value=1>Green</option>
+        <option name="blue" value=2>Blue</option>
+        <option name="purple" value=3>Purple</option>
+      </select>
+      <button id="submit" onclick="createTable()">SUBMIT</button>
     </div>
-    <div><div id="table" class="grid-container"></div></div>
+    <div>
+      <div id="table" class="grid-container" />
+    </div>
     <script src="alientiles.js"></script>
   </body>
 </html>

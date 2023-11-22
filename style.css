@@ -3,7 +3,8 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Comic Neue', sans-serif;
+  font-size: 15pt;
   color: #606c71;
 }
 
@@ -21,7 +22,7 @@ h1 {
   grid-row-gap: 0;
   width: 70vmin;
   height: 70vmin;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -33.5%);
   z-index: 1;
@@ -38,11 +39,10 @@ h1 {
   transition-delay: 0s;
 }
 
-#dimension {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+#dimension, #colorComboBox {
+  font-family: 'Comic Neue', sans-serif;
   color: #606c71;
-  width: 10vmin;
+  width: 25vmin;
   height: 4vmin;
   margin: 1vmin;
   padding-left: 1vmin;
@@ -51,8 +51,7 @@ h1 {
 }
 
 #submit {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+  font-family: 'Comic Neue', sans-serif;
   padding: 2vmin 3vmin;
   margin: 1vmin;
   color: #fff;
@@ -63,7 +62,7 @@ h1 {
 
 #form {
   position: absolute;
-  top: 15%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, 0%);
 }
