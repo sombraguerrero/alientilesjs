@@ -21,7 +21,8 @@
       <li>To achieve ultimate peace and transcendence, create the following Alien Tile "Sivaraman" patterns: <a href="assets/siva1.jpg">Bazuluk</a>, <a href="assets/siva2.jpg">Shenkursk</a>, <a href="assets/siva3.jpg">Vologda</a>, <a href="assets/siva4.jpg">Novomoskovsk</a>, <a href="assets/siva5.jpg">Orel</a>, <a href="assets/siva6.jpg">Shar'ya</a>, <a href="assets/siva7.jpg">Vyshniy</a>, <a href="assets/siva8.jpg">Charon</a>
       </li>
     </ol>
-    <div id="form"> Number of Tiles: <input type="number" id="dimension" autofocus value="7" min="2" max="14" placeholder="Dimension">
+    <div id="form"> Number of Tiles: <input type="number" id="dimension" autofocus value="7" min="2" max="14" placeholder="Dimension"> Moves: <input type="number" id="actionCnt" readonly=true>
+	<!--
       <select name="colorSel" id="colorComboBox">
         <option name="placeholder" value="">Select a starting color!</option>
         <option name="random" value="Randomize">Randomize all tile colors!</option>
@@ -30,6 +31,8 @@
         <option name="blue" value=2>Blue</option>
         <option name="purple" value=3>Purple</option>
       </select>
+	  -->
+	  <button id="undoBtn" onclick="undoAction()">UNDO</button>
       <button id="submit" onclick="createTable()">SUBMIT</button>
     </div>
     <div>
