@@ -13,6 +13,7 @@ var tile_color = {
 
 
 function createTable() {
+  actionStack.length = 0;	
   document.getElementById("table").innerHTML = "";
   dimension = document.getElementById("dimension").value;
   tiles = new Array(dimension*dimension).fill(START_COLOR);
@@ -29,7 +30,8 @@ function createTable() {
 }
 
 function undoAction() {
-	updateColors(actionStack.pop(), -1);
+	if (actionStack.length > 0)
+		updateColors(actionStack.pop(), -1);
 	document.getElementById("actionCnt").value = actionStack.length;
 }
 
