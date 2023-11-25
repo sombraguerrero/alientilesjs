@@ -13,7 +13,7 @@ var tile_color = {
 
 
 function createTable() {
-  actionStack.length = 0;	
+  document.getElementById("actionCnt").value = actionStack.length = 0;
   document.getElementById("table").innerHTML = "";
   dimension = document.getElementById("dimension").value;
   tiles = new Array(dimension*dimension).fill(START_COLOR);
