@@ -22,16 +22,16 @@
       </li>
     </ol>
     <div id="form"> Number of Tiles: <input type="number" id="dimension" autofocus value="7" min="2" max="14" placeholder="Dimension"> Moves: <input type="number" id="actionCnt" readonly=true>
-	<!--
+	
       <select name="colorSel" id="colorComboBox">
         <option name="placeholder" value="">Select a starting color!</option>
-        <option name="random" value="Randomize">Randomize all tile colors!</option>
         <option name="red" value=0>Red</option>
         <option name="green" value=1>Green</option>
         <option name="blue" value=2>Blue</option>
         <option name="purple" value=3>Purple</option>
+		<option name="random" value=4>Randomize all tile colors!</option>
       </select>
-	  -->
+	  
 	  <button id="undoBtn" onclick="undoAction()">UNDO</button>
       <button id="submit" onclick="createTable()">SUBMIT</button>
     </div>
