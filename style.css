@@ -8,6 +8,18 @@ body {
   color: #606c71;
 }
 
+textarea {
+        overflow-y: scroll;
+        height: 640px;
+        resize: none; /* Remove this if you want the user to resize the textarea */
+		position: absolute;
+		border: 5px;
+		width: 480px;
+		left: 12%;
+		/*transform: translate(-50%, -33.5%);*/
+		z-index: 2;
+}
+
 h1, h4 {
   text-align: center;
 }
@@ -23,7 +35,7 @@ h1, h4 {
   width: 70vmin;
   height: 70vmin;
   top: 90%;
-  left: 45%;
+  left: 73%;
   transform: translate(-50%, -33.5%);
   z-index: 1;
 }
@@ -50,7 +62,7 @@ h1, h4 {
   border-radius: 2px;
 }
 
-#submit, #undoBtn {
+#submit, #undoBtn, #jsonBtn {
   font-family: 'Comic Neue', sans-serif;
   padding: 2vmin 3vmin;
   margin: 1vmin;

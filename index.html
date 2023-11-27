@@ -31,13 +31,14 @@
         <option name="purple" value=3>Purple</option>
 		<option name="random" value=4>Randomize all tile colors!</option>
       </select>
-	  
+      <button id="submit" onclick="createTable()">SUBMIT/RESET</button>
 	  <button id="undoBtn" onclick="undoAction()">UNDO</button>
-      <button id="submit" onclick="createTable()">SUBMIT</button>
+	  <button id="jsonBtn" onclick="movesToJson()">PRINT MOVES (JSON)</button><br clear=all><textarea readonly=true id="movesOutput"></textarea>
     </div>
     <div>
       <div id="table" class="grid-container" />
     </div>
     <script src="alientiles.js"></script>
+	
   </body>
 </html>

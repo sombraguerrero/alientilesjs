@@ -13,6 +13,7 @@ function createTable()
 {
   var colorComboBoxSelection = document.getElementById("colorComboBox").value; 
   document.getElementById("actionCnt").value = actionStack.length = 0;
+  document.getElementById("movesOutput").value = "";
   document.getElementById("table").innerHTML = "";
   dimension = document.getElementById("dimension").value;
   document.documentElement.style.setProperty("--dimension", dimension);
@@ -78,6 +79,21 @@ function updateColors(targetTile, undo)
 	{
 		toggle(undo, tiles[targetTile.row][i]);
 	}
+}
+
+function movesToJson()
+{
+	var result = new Object();
+	result.initial_color  = document.getElementById("colorComboBox").value < 4 ? tile_color[document.getElementById("colorComboBox").value] : "random";
+	result.board_size = dimension;
+	result.move_count = actionStack.length;
+	var printArray = new Array();
+	for (i = 0; i < actionStack.length; i++)
+	{
+		printArray.push({'row': actionStack[i].row, 'column': actionStack[i].col, 'color': tile_color[actionStack[i].colorIndex]});
+	}
+	result.moves = printArray;
+	document.getElementById("movesOutput").value = JSON.stringify(result, null, 3);
 }
 
 window.onload = function(){
